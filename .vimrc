@@ -1,4 +1,8 @@
-set rtp+=~/.vim/bundle/neobundle.vim/
+if has('win32')
+  set rtp+=~/vimfiles/bundle/neobundle.vim/
+else
+  set rtp+=~/.vim/bundle/neobundle.vim/
+endif
 
 runtime! custom_preconfig/*.vim
 runtime! common_config/*.vim

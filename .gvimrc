@@ -27,10 +27,14 @@
   endif
 
 " set default font
-" https://github.com/Lokaltog/powerline-fonts
+" https://github.com/powerline/fonts.git
+" https://github.com/runsisi/consolas-font-for-powerline
+  set encoding=utf-8
   if has('unix')
     set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 10
-  else
+  elseif has('win32')
+    set guifont=Meslo_LG_S_DZ_for_Powerline:h9:cDEFAULT
+  elseif has('mac')
     set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h15
   endif
 

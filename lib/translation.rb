@@ -11,7 +11,24 @@ class Translation
     @target = pathname(target_path)
   end
 
+  def self.windows?
+    Rake::Win32.windows?
+  end
+
   def link
+    if windows?
+      hard_link
+    else
+      soft_link
+    end
+  end
+
+  def hard_link
+    raise "This source file does not exist: #{source}" unless source_exists?
+    `cp -R \"#{source}\" \"#{target}\"`
+  end
+
+  def soft_link
     raise "This source file does not exist: #{source}" unless source_exists?
     `ln -s \"#{source}\" \"#{target}\"`
   end
