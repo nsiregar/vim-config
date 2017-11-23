@@ -231,6 +231,10 @@ call plug#begin('~/.vim/plugged')
   let g:syntastic_javascript_checkers = ['eslint']
   let g:syntastic_scss_checkers = ['stylelint']
 
+" Autoformat to follow conventions
+Plug 'Chiel92/vim-autoformat'
+" Perform Autoformat on save, comment this to disable
+au BufWrite * :Autoformat
 
 call plug#end()
 
