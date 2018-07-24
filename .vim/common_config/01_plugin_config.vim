@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-scripts/ruby-matchit'
   Plug 'tpope/vim-abolish'
   Plug 'mattn/emmet-vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 
  " Vim airline configs

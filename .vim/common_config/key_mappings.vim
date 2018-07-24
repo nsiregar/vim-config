@@ -74,3 +74,5 @@
 " CTRL-V and SHIFT-Insert are Paste
   map <S-Insert> "+gP
   cmap <S-Insert> <C-R>+
+
+  map <Leader>t :FZF<cr>
