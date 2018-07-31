@@ -22,19 +22,12 @@ call plug#begin('~/.vim/plugged')
 " Easy motion config
   Plug 'easymotion/vim-easymotion'
 
-"Supertab code completion"
-  Plug 'ervandew/supertab'
-  let g:SuperTabContextDefaultCompletionType = "<c-n>"
+" Code completion"
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  let g:ycm_autoclose_preview_window_after_completion = 1
 
-" Command T
-  Plug 'wincent/command-t', {'do': 'cd ruby/command-t && ruby extconf.rb && make'}
-    nmap <C-p> :<C-U>CommandT<CR>
-    nmap <C-b> :<C-U>CommandTBuffer<CR>
-
-    let g:CommandTFileScanner = "git"
-    let g:CommandTMaxHeight = 30
-    let g:CommandTMaxFiles = 500000
-    let g:CommandTSCMDirectories='.git,.hg,.svn,.bzr,_darcs,manifest.webapp'
+" Fuzzy Finder
+  Plug 'Shougo/unite.vim'
 
 " Slim
   Plug 'slim-template/vim-slim'

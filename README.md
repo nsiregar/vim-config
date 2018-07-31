@@ -6,20 +6,23 @@ Konfigurasi VIM untuk kebutuhan KMKLabs Engineer
 This config is built primarily to work on top of Linux Gvim, but should be usable on top of other `macvim` or `gvim` installations that are built with all of the `vim` features necessary to support the used plugins.
 
 Dependency yg perlu di install:
-- ruby-dev 
+- ruby-dev
 - vim ruby version sama dengan system ruby.
+- build-essential
+- cmake
+- python-dev
 
 Untuk mengecek ruby di vim, gunakan `:ruby puts "#{RUBY_DESCRIPTION}"`
-Untuk mengecek ruby di system, gunakan `ruby -v`. 
+Untuk mengecek ruby di system, gunakan `ruby -v`.
 
-Jika versi ruby system tidak sama, silahkan install ruby menggunakan rvm atau rbenv. Selanjutnya, masuk ke directory plug-in command-t pada local workstation kalian, dan lakukan perintah sebagai berikut: 
+Jika versi ruby system tidak sama, silahkan install ruby menggunakan rvm atau rbenv. Selanjutnya, masuk ke directory plug-in command-t pada local workstation kalian, dan lakukan perintah sebagai berikut:
 - make clean
 - make
 - sudo make install
 
 Cek kembali lagi pada GVIM, dan pastikan tidak terjadi segmentation fault.
 
-## Quick Install 
+## Quick Install
 ### With Wget
 ```
 sh -c "$(wget https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh -O -)"
@@ -307,10 +310,17 @@ For instance, if the cursor was inside `"foo bar"`, you could type
 
 There's a lot more; check it out at `:help surround`
 
-## SuperTab
+## Youcompleteme
 
-In insert mode, start typing something and hit `<TAB>` to tab-complete
-based on the current context.
+Most modern autocomple with docs!! To install this plugin, you must install
+some development packages in your computer.
+For Debian family, you can use apt
+```
+sudo apt-get install build-essential cmake python-dev
+```
+for other OS, please follow instruction in youcomplete
+page https://github.com/Valloric/YouCompleteMe#installation
+
 
 ## Tagbar
 
