@@ -31,6 +31,8 @@
 " https://github.com/Lokaltog/powerline-fonts
   if has('mac') || has('win32')
     set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h11
+  else
+    set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 10
   endif
 
 " initial window size
