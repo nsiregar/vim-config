@@ -3,7 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Plugins requiring no additional configuration or keymaps
-  Plug 'tomtom/tcomment_vim'
+  Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rake'
@@ -16,8 +16,11 @@ call plug#begin('~/.vim/plugged')
 
 
  " Vim airline configs
-  Plug 'bling/vim-airline'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  let g:airline#extensions#tabline#enabled = 1
   let g:airline_powerline_fonts = 1
+  let g:airline_theme='minimalist'
 
 " Easy motion config
   Plug 'easymotion/vim-easymotion'

@@ -11,6 +11,7 @@ Dependency yg perlu di install:
 - build-essential
 - cmake
 - python-dev
+- fonts-powerline
 
 Untuk mengecek ruby di vim, gunakan `:ruby puts "#{RUBY_DESCRIPTION}"`
 Untuk mengecek ruby di system, gunakan `ruby -v`.
