@@ -10,6 +10,10 @@
   nmap gr :e config/routes.rb<cr>
   nmap gm :e Gemfile<cr>
 
+" nerdcommenter
+  nmap gcc :call NERDComment(0,"toggle")<cr>
+  vmap gc :call NERDComment(0,"toggle")<cr>
+
 " insert blank lines without going into insert mode
   nmap go o<esc>
   nmap gO O<esc>
