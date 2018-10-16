@@ -13,6 +13,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-abolish'
   Plug 'mattn/emmet-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'ap/vim-css-color'
+  Plug 'digitaltoad/vim-pug'
 
 
  " Vim airline configs
