@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'ap/vim-css-color'
   Plug 'digitaltoad/vim-pug'
+  Plug 'leafgarland/typescript-vim'
 
 
  " Vim airline configs
