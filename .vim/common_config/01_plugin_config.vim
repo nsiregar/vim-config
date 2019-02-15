@@ -13,6 +13,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-abolish'
   Plug 'mattn/emmet-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  map <Leader>t :FZF<cr>
+  map <C-P> :FZF<cr>
+  map <Leader>b :Buffers<cr>
+  map <C-B> :Buffers<cr>
+
   Plug 'ap/vim-css-color'
   Plug 'digitaltoad/vim-pug'
 
