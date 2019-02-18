@@ -2,8 +2,11 @@
 " install plugins.
 call plug#begin('~/.vim/plugged')
 
-" Plugins requiring no additional configuration or keymaps
+" Nerd commenter using default align left
   Plug 'scrooloose/nerdcommenter'
+  let g:NERDDefaultAlign = 'left'
+
+" Plugins requiring no additional configuration or keymaps
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rake'
