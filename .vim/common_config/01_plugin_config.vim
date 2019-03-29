@@ -17,8 +17,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  map <Leader>t :FZF<cr>
-  map <C-P> :FZF<cr>
+    function! SimpleFZF()
+      call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))
+    endfunction
+    command! SimpleFZF call SimpleFZF()
+  map <Leader>t :SimpleFZF<cr>
+  map <C-P> :SimpleFZF<cr>
   map <Leader>b :Buffers<cr>
   map <C-B> :Buffers<cr>
 
