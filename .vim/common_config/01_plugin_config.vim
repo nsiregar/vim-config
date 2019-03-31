@@ -18,7 +18,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
     function! SimpleFZF()
-      call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))
+      let gitdir = trim(system('git rev-parse --is-inside-work-tree'))
+      if gitdir == 'true'
+        call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))
+      else
+        :FZF
+      endif
     endfunction
     command! SimpleFZF call SimpleFZF()
   map <Leader>t :SimpleFZF<cr>
