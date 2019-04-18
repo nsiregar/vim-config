@@ -17,8 +17,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+    function! Strip(var)
+      return substitute(a:var, '^\s*\(.\{-}\)\s*\n', '\1', '')
+    endfunction
+
     function! SimpleFZF()
-      let gitdir = trim(system('git rev-parse --is-inside-work-tree'))
+      let gitdir = Strip(system('git rev-parse --is-inside-work-tree'))
       if gitdir == 'true'
         call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))
       else
