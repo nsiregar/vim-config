@@ -2,6 +2,9 @@
   nmap <Leader>w :set wrap!<cr>
   nmap <Leader>W :set nowrap<cr>
 
+" map leader to space
+  map <Space> <Leader>
+
 " close all other windows (in the current tab)
   nmap gW :only<cr>
 

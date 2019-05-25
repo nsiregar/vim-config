@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
       endif
     endfunction
     command! SimpleFZF call SimpleFZF()
+
   map <Leader>t :SimpleFZF<cr>
   map <C-P> :SimpleFZF<cr>
   map <Leader>b :Buffers<cr>
