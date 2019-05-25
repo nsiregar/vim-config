@@ -14,12 +14,12 @@ Dependency yg perlu di install:
 ## Quick Install
 ### With Wget
 ```
-sh -c "$(wget https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/nsiregar/vim-config/master/install.sh -O -)"
 ```
 
 ### With Curl
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/nsiregar/vim-config/master/install.sh)"
 ```
 
 ## Customizing
