@@ -51,8 +51,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'easymotion/vim-easymotion'
 
 " Code completion"
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-  let g:ycm_autoclose_preview_window_after_completion = 1
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+  let g:deoplete#enable_at_startup = 1
 
 " Fuzzy Finder
   Plug 'Shougo/unite.vim'
