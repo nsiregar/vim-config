@@ -2,6 +2,7 @@
   set nocompatible
 
 " enable syntax highlighting
+  let python_highlight_all = 1
   syntax on
 
 " default color scheme
@@ -115,3 +116,12 @@
 
 " *.es6 is javascript file
   au BufRead,BufNewFile *.es6 set filetype=javascript
+
+" pretty but not terminal-compatible color scheme
+  if has('gui_running')
+    set background=dark
+    colorscheme codeschool
+  else
+    colorscheme monokai-soda
+  endif
+

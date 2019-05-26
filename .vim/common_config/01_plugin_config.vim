@@ -64,6 +64,9 @@ call plug#begin('~/.vim/plugged')
 " Fuzzy Finder
   Plug 'Shougo/unite.vim'
 
+" Python flake-8
+  Plug 'nvie/vim-flake8'
+
 " Slim
   Plug 'slim-template/vim-slim'
     au BufNewFile,BufRead *.slim set filetype=slim
