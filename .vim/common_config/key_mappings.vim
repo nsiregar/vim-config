@@ -94,3 +94,6 @@
   noremap <Leader>8 8gt
   noremap <Leader>9 9gt
   noremap <Leader>0 :tablast<cr>
+
+" ipdb debugger
+  nnoremap <Leader>pd oimport ipdb;ipdb.set_trace()<Esc>
