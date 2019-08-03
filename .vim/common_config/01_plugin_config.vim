@@ -272,6 +272,17 @@ call plug#begin('~/.vim/plugged')
   let g:syntastic_javascript_checkers = ['eslint']
   let g:syntastic_scss_checkers = ['stylelint']
 
+" solarized8
+  Plug 'lifepillar/vim-solarized8'
+
+" editorconfig support
+  Plug 'editorconfig/editorconfig-vim'
+
+" kotlin vim
+  Plug 'udalov/kotlin-vim'
+
+" golang vim
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 

@@ -120,8 +120,10 @@
 " pretty but not terminal-compatible color scheme
   if has('gui_running')
     set background=dark
-    colorscheme codeschool
+    colorscheme solarized8
   else
-    colorscheme monokai-soda
+    set termguicolors
+    let g:solarized_termtrans=1
+    colorscheme solarized8
   endif
 
