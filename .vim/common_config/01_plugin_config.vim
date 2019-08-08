@@ -177,6 +177,9 @@ call plug#begin('~/.vim/plugged')
 " gundo for awesome undo tree visualization
   Plug 'sjl/gundo.vim'
     map <Leader>h :GundoToggle<CR>
+    if has('python3')
+      let g:gundo_prefer_python3 = 1
+    endif
 
 
 " rails.vim, nuff' said
