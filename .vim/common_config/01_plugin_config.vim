@@ -287,6 +287,9 @@ call plug#begin('~/.vim/plugged')
 " golang vim
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" vim tmux focus events
+  Plug 'tmux-plugins/vim-tmux-focus-events'
+
 call plug#end()
 
 filetype plugin indent on
