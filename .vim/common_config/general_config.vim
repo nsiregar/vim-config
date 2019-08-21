@@ -127,3 +127,6 @@
     colorscheme solarized8
   endif
 
+ " splitbar char
+   set fillchars+=vert:│
+   hi VertSplit ctermfg=241 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
