@@ -114,5 +114,5 @@
 
   augroup LSP
     autocmd!
-    autocmd FileType cpp,c,py,rb,go call SetLSPShortcuts()
+    autocmd FileType * call SetLSPShortcuts()
   augroup END
