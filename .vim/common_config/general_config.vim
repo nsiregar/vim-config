@@ -4,6 +4,7 @@
 " enable syntax highlighting
   let python_highlight_all = 1
   syntax on
+  set signcolumn=yes
 
 " default color scheme
   set t_Co=256

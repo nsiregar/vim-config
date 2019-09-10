@@ -73,11 +73,10 @@ call plug#begin('~/.vim/plugged')
       \ 'ruby': ['~/.rvm/gems/ruby-2.6.3/bin/solargraph', 'stdio'],
       \ }
 
-  nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-  " Or map each action separately
-  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-  nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+  Plug 'Shougo/echodoc.vim'
+  set cmdheight=2
+  let g:echodoc#enable_at_startup = 1
+  let g:echodoc#type = 'signature'
 
 " Fuzzy Finder
   Plug 'Shougo/unite.vim'
