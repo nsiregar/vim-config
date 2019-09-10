@@ -61,6 +61,24 @@ call plug#begin('~/.vim/plugged')
   endif
   let g:deoplete#enable_at_startup = 1
 
+" LSP Support
+  Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
+
+  let g:LanguageClient_serverCommands = {
+      \ 'go': ['~/go/bin/gopls', '-mode', 'stdio'],
+      \ 'python': ['~/.pyenv/shims/pyls'],
+      \ 'ruby': ['~/.rvm/gems/ruby-2.6.3/bin/solargraph', 'stdio'],
+      \ }
+
+  nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+  " Or map each action separately
+  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
 " Fuzzy Finder
   Plug 'Shougo/unite.vim'
 
