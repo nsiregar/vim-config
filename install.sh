@@ -19,6 +19,8 @@ if [ -d $VIM_INSTALL_DIR ]; then
   rm -rf $VIM_INSTALL_DIR
 fi
 
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+
 git clone $VIM_REPO $VIM_INSTALL_DIR;
 curl -fLo "${VIM_INSTALL_DIR}/.vim/autoload/plug.vim" --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

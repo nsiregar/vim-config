@@ -51,32 +51,11 @@ call plug#begin('~/.vim/plugged')
 " Easy motion config
   Plug 'easymotion/vim-easymotion'
 
-" Code completion"
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
-  let g:deoplete#enable_at_startup = 1
-
-" LSP Support
-  Plug 'autozimu/LanguageClient-neovim', {
-      \ 'branch': 'next',
-      \ 'do': 'bash install.sh',
-      \ }
-
-  let g:LanguageClient_serverCommands = {
-      \ 'go': ['~/go/bin/gopls', '-mode', 'stdio'],
-      \ 'python': ['~/.pyenv/shims/pyls'],
-      \ 'ruby': ['~/.rvm/gems/ruby-2.6.3/bin/solargraph', 'stdio'],
-      \ }
-
-  Plug 'Shougo/echodoc.vim'
-  set cmdheight=2
-  let g:echodoc#enable_at_startup = 1
-  let g:echodoc#type = 'signature'
+" Intellisense vim
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
 
 " Fuzzy Finder
   Plug 'Shougo/unite.vim'
